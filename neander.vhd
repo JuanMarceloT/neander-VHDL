@@ -322,11 +322,11 @@ begin
       memdata(3) <= x"19";	-- Endereço 25 em decimal	
       memdata(4) <= OPSTA; -- Guarda o valor no endereço indicado
       memdata(5) <= x"14";	-- Endereço 20 em decimal
-		memdata(6) <= OPHLT;  -- Instrução para parar a execução
-		memdata(7) <= x"00";
-		memdata(8) <= x"00";
-		memdata(9) <= x"00";
-		memdata(10) <= x"00";
+		memdata(6) <= OPJN;  -- SE 0 pula para o fim
+		memdata(7) <= x"0A";
+		memdata(8) <= OPJMP; -- Pula para o incio
+		memdata(9) <= x"02";
+		memdata(10) <= OPHLT; -- Instrução para parar a execução
 		memdata(11) <= x"00";
 		memdata(12) <= x"00";
 		memdata(13) <= x"00";
@@ -341,7 +341,7 @@ begin
 		memdata(22) <= x"00";
 		memdata(23) <= x"00";
 		memdata(24) <= x"05"; -- 5 em decimal
-		memdata(25) <= x"10"; -- 16 em decimal
+		memdata(25) <= x"FF"; -- -1 em decimal
 		memdata(26) <= x"00";
 		memdata(27) <= x"00";
 		memdata(28) <= x"00";
